@@ -11,4 +11,5 @@ In this showcase, I highlight how the raw data was transformed into a structured
 * **Targeted Filtering:** Isolates relevant data by strictly filtering for successfully delivered orders that specifically used the 2-hour delivery service.
 * **Data Flattening:** Uses GROUP BY and MAX() aggregation to condense multiple status logs into a single, complete operational timeline per order.
 * **Granular Bottleneck Tracking:** Uses TIMESTAMP_DIFF to measure the exact minute duration of every micro step in the fulfillment funnel.
-* **Outlier Mitigation:** Calculates the total cost of delayed orders by simulating a 10k compensation voucher for every late delivery to understand the potential revenue leak.
+* **Outlier Mitigation:** Computes the 75th Percentile (P75) and 90th Percentile (P90) using the APPROX_QUANTILES function to evaluate performance under extreme heavy load scenarios.
+* **Financial Impact Simulation:** Calculates the total cost of delayed orders by simulating a 10k compensation voucher for every late delivery to understand the potential revenue leak.
